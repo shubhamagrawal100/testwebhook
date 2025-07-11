@@ -15,7 +15,7 @@ const verifyToken = process.env.VERIFY_TOKEN;
 app.get('/', (req, res) => {
  
     console.log('WEBHOOK VERIFIED');
-    res.status(200).send(challenge);
+    res.status(200).send("Webhook verified");
 
 });
 
