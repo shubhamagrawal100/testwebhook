@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
  
     res.status(200).send(challenge);
-    logger.info("Webhook verified successfully!");
+    console.log("Webhook verified successfully!");
 
 
 });
