@@ -14,8 +14,14 @@ const verifyToken = process.env.VERIFY_TOKEN;
 // Route for GET requests
 app.get('/', (req, res) => {
  
-    console.log('WEBHOOK VERIFIED');
-    res.status(200).send("Webhook verified");
+    const mode = req.query["hub.mode"];
+  const token = req.query["hub.verify_token"];
+  const challenge = req.query["hub.challenge"];
+
+ 
+    res.status(200).send(challenge);
+    logger.info("Webhook verified successfully!");
+
 
 });
 
